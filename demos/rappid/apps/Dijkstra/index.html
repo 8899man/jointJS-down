@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+
+        <title>Graph Shortest Path Finding</title>
+
+        <link rel="stylesheet" type="text/css" href="../../build/rappid.css">
+        <link rel="stylesheet" type="text/css" href="css/dijkstra.css" />
+
+    </head>
+    <body>
+
+
+<!-- Copyright © 2008. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.1.2.1052</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  (Unregistered) on  01/18/17 14:22:27.<br>
+<b>Address:</b> <a class="info" href="http://resources.jointjs.com/demos/rappid/apps/Dijkstra/index.html">http://resources.jointjs.com/demos/rappid/apps/Dijkstra/index.html</a><br>
+<b>Title:</b> Graph Shortest Path Finding &nbsp;&bull;&nbsp; <b>Size:</b> 1668 &nbsp;&bull;&nbsp; <b>Last Modified:</b> Fri, 02 Dec 2016 10:04:44 GMT<br></div>
+<!-- /Copyright © 2008. Spidersoft Ltd -->
+
+
+
+        <script>
+            SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function (toElement) {
+                return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+            };
+        </script>
+
+        <p>Click a node and hover over another one to see the shortest path between them.</p>
+
+        <div class="example shorter-path-finder">
+            <div class="options">
+                <label>Directed graph<input type="checkbox" id="opt-directed"/></label>
+                <label>Edit mode<input type="checkbox" id="opt-edit"/>
+                    <p id="edit-mode-help">
+                        Double-click a blank paper area to create new nodes.
+                        Drag the text of nodes to create new edges.
+                    </p>
+                </label>
+            </div>
+            <pre id="path"></pre>
+            <div id="paper" class="paper"></div>
+
+        </div><!--end example-->
+
+        <!-- Rappid/JointJS dependencies: -->
+        <script src="../../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../../node_modules/lodash/index.js"></script>
+        <script src="../../node_modules/backbone/backbone.js"></script>
+
+        <script src="../../build/rappid.js"></script>
+
+        <script src="src/dijkstra.js"></script>
+    </body>
+</html>

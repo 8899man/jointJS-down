@@ -1,0 +1,14 @@
+.example {
+    text-align: center;
+    font-family: 'Helvetica Neue Light','Helvetica Neue','Source Sans Pro',sans-serif;
+}
+a {
+    display: inline-block;
+    margin-top: 32px;
+    color: #3c4260;
+    text-decoration: underline;
+}
+a:hover {
+    color: #31d0c6;
+    text-decoration: underline;
+}
